@@ -1,12 +1,17 @@
 sudo apt update
 sudo apt install python3-pip
 sudo apt install python3.10-venv
-python3 -m venv airflow_venv
+python3 -m venv aqi_venv
+source aqi_venv/bin/activate
 sudo pip install pandas 
 sudo pip install s3fs
 sudo pip install fsspec
 sudo pip install apache-airflow
 sudo pip install apache-airflow-providers-postgres
+
+edit the inbound rules for port 5432.
+
+
 psql -h rds-db-test-yml-4.cvzpgj7bczqy.us-west-2.rds.amazonaws.com -p 5432 -U postgres -W
 CREATE EXTENSION aws_s3 CASCADE;
 

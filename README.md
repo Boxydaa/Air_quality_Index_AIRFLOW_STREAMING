@@ -3,15 +3,17 @@
 ![Blank diagram](https://github.com/Boxydaa/Air_quality_Index_AIRFLOW_STREAMING/assets/152782315/4b584df7-a244-4032-b887-8a8b98c4edd4)
 
 
-1. Introduction:
+# 1. Introduction:
 
 This document outlines the architecture, components, and workflow of the OpenAQ Data Pipeline project. The project aims to collect air quality data from the OpenAQ API, store it in Amazon S3, process and transform it using AWS Glue, and make it queryable via Amazon Athena and Amazon Redshift.
-2. Project Overview:
+
+# 2. Project Overview:
 
 The project utilizes the OpenAQ API as its primary data source, providing access to daily data, countries, cities, and parameters related to air quality.
-3. Components and Workflow:
 
-Data Retrieval and Storage:
+# 3. Components and Workflow:
+
+# Data Retrieval and Storage:
 
 An Airflow DAG hosted on an EC2 instance retrieves data from the OpenAQ API daily.
 The retrieved data is transformed into CSV files and loaded into an Amazon S3 bucket.
@@ -29,11 +31,13 @@ CloudWatch is employed to review logs, providing insights into the performance a
 Access Control:
 
 IAM roles and policies are created to manage access to AWS resources, ensuring secure data handling.
+
 4. Architecture Overview:
 
-The architecture employs a serverless and scalable approach, leveraging AWS services such as S3, Glue, Athena, Lambda, CloudWatch, and Redshift.
+# The architecture employs a serverless and scalable approach, leveraging AWS services such as S3, Glue, Athena, Lambda, CloudWatch, and Redshift.
 Airflow DAG serves as the orchestrator for data retrieval and storage, while Glue handles data processing and transformation.
 Athena enables ad-hoc querying of the data, while Redshift facilitates long-term storage and analytics.
+
 5. Conclusion:
 
 The OpenAQ Data Pipeline project provides a robust and scalable solution for collecting, processing, and analyzing air quality data.

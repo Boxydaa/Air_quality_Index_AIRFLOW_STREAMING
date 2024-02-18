@@ -1,0 +1,8 @@
+{
+  "detail-type": ["Glue Crawler State Change"],
+  "source": ["aws.glue"],
+  "detail": {
+    "crawlerName": ["aqi-crawl"],
+    "state": ["Succeeded"]
+  }
+}
